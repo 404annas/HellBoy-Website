@@ -1,47 +1,55 @@
-import React from "react";
-
 const About = () => {
   return (
-    <div className="bg-[#E1D5D5] h-screen flex">
-      <div className="flex flex-col gap-40 w-1/2 py-16 px-16">
+    <div className="bg-[#E1D5D5] flex flex-col lg:flex-row">
+      
+      {/* Left Column */}
+      <div className="flex flex-col gap-10 md:gap-24 lg:gap-36 w-full lg:w-1/2 p-6 md:p-12 lg:p-16">
+        {/* Header */}
         <div className="flex items-center gap-4">
-          <p className="uppercase ep font-black text-[#1E1E1E]">
+          <p className="uppercase ep font-black text-[#1E1E1E] text-base md:text-lg lg:text-xl">
             What I Stand For
           </p>
           <img
-            className="w-20"
+            className="w-12 md:w-16 lg:w-20"
             src="https://cdn.prod.website-files.com/6283c236475ca51c143da7f1/6283c236475ca519083da821_red-frame.svg"
             alt=""
           />
         </div>
+
+        {/* Name */}
         <div className="relative">
-          <img
-            className="w-[480px]"
-            src="https://cdn.prod.website-files.com/6283c236475ca51c143da7f1/6283c236475ca539e43da873_Hunter-Yeany.svg"
-            alt=""
-          />
-          <div className="absolute inset-0 bg-[#E1D5D5]/70"></div>
+          <div className="satisfy font-black text-[48px] sm:text-[64px] md:text-[80px] lg:text-[110px] leading-none -rotate-[6deg] sm:-rotate-[8deg] lg:-rotate-[10deg]">
+            <h1>Sharukh</h1>
+            <h1 className="sm:translate-x-20 md:translate-x-32 lg:translate-x-40">Kazim</h1>
+          </div>
+          <div className="absolute inset-0 bg-[#E1D5D5]/70 h-40 sm:h-56 md:h-64 lg:h-80 -translate-y-2 -rotate-[6deg] sm:-rotate-[8deg] lg:-rotate-[10deg]"></div>
         </div>
       </div>
-      <div className="w-1/2 -translate-x-24 py-16 px-16">
-        <p className="uppercase font-extrabold bebas text-[110px] leading-none tracking-wide text-[#1E1E1E]">
-          potential
-        </p>
-        <p className="uppercase font-extrabold bebas text-[110px] leading-none tracking-wide text-[#1E1E1E]">
-          has no
-        </p>
-        <p className="uppercase font-extrabold bebas text-[110px] leading-none tracking-wide text-[#1E1E1E]">
-          limits
-        </p>
 
-        <p className="my-8 p-regular text-[#292828]">
+      {/* Right Column */}
+      <div className="w-full lg:w-1/2 -translate-x-0 lg:-translate-x-24 p-6 md:p-12 lg:p-16 flex flex-col">
+        <div className="">
+          <p className="uppercase font-extrabold bebas text-[48px] sm:text-[64px] md:text-[80px] lg:text-[110px] leading-none tracking-wide text-[#1E1E1E]">
+            potential
+          </p>
+          <p className="uppercase font-extrabold bebas text-[48px] sm:text-[64px] md:text-[80px] lg:text-[110px] leading-none tracking-wide text-[#1E1E1E]">
+            has no
+          </p>
+          <p className="uppercase font-extrabold bebas text-[48px] sm:text-[64px] md:text-[80px] lg:text-[110px] leading-none tracking-wide text-[#1E1E1E]">
+            limits
+          </p>
+        </div>
+
+        <p className="my-6 md:my-8 text-sm sm:text-base md:text-lg p-regular text-[#292828]">
           As an athlete, driving is my passion. As a competitor, winning is my
           priority. But as a person, my purpose lies far beyond finish lines and
-          fanfare
+          fanfare.
         </p>
 
-        <div className="bg-[#222222] py-3 px-6 inline-block">
-          <button className="ep font-black text-white">MY MISSION</button>
+        <div className="bg-[#222222] py-2 px-4 sm:py-3 sm:px-6 inline-block w-fit">
+          <button className="ep font-black text-white text-sm sm:text-base">
+            MY MISSION
+          </button>
         </div>
       </div>
     </div>
