@@ -12,7 +12,6 @@ const Projects = () => {
     offset: ["start end", "end start"],
   });
 
-  // Only apply horizontal scroll on large screens
   const x = useTransform(scrollYProgress, [0, 1], ["20%", "-100%"]);
 
   const stories = [
@@ -55,90 +54,84 @@ const Projects = () => {
   ];
 
   return (
-    <div className="bg-[#1F1F1F] text-white">
-      <section ref={containerRef} className="relative h-auto lg:h-[400vh]">
-        <div className="relative lg:sticky top-0 lg:h-screen flex items-center overflow-hidden">
-          {/* Mobile/Tablet: Vertical stack */}
-          <div className="flex flex-col lg:hidden">
-            {stories.map((story) => (
-              <div key={story.id} className="flex flex-col bg-[#1F1F1F]">
-                {/* Image */}
-                <div className="w-full">
-                  <img
-                    src={story.image}
-                    alt={story.title}
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="p-4 space-y-4">
-                  <h4 className="text-red-500 text-xs uppercase tracking-widest font-medium ep">
-                    {story.subtitle}
-                  </h4>
-                  <h2 className="text-2xl sm:text-3xl font-bold leading-tight tracking-wide bebas">
-                    {story.title}
-                  </h2>
-                  <p className="text-sm text-gray-300 leading-relaxed">
-                    {story.description}
-                  </p>
-                  <a
-                    href={story.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 text-xs tracking-wider uppercase transition-all duration-300 hover:scale-105 rounded shadow ep"
-                  >
-                    View Project
-                  </a>
-                </div>
+    <div className="bg-[#1F1F1F] text-white w-full">
+      <section ref={containerRef} className="w-full">
+        {/* === Mobile / Tablet Layout === */}
+        <div className="flex flex-col lg:hidden">
+          {stories.map((story) => (
+            <div key={story.id} className="flex flex-col w-full">
+              <div className="w-full">
+                <img
+                  src={story.image}
+                  alt={story.title}
+                  className="w-full aspect-video object-cover"
+                />
               </div>
-            ))}
-          </div>
+              <div className="p-4 sm:p-6 md:p-8 space-y-3 sm:space-y-4">
+                <h4 className="text-red-500 text-xs sm:text-sm uppercase tracking-widest font-medium ep">
+                  {story.subtitle}
+                </h4>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-wide bebas">
+                  {story.title}
+                </h2>
+                <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
+                  {story.description}
+                </p>
+                <a
+                  href={story.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 hover:scale-105 rounded shadow ep"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
 
-          {/* Desktop: Horizontal scroll with animation */}
-          <motion.div style={{ x }} className="hidden lg:flex">
-            {stories.map((story) => (
-              <motion.div
-                key={story.id}
-                className="w-screen h-screen bg-[#1F1F1F] flex flex-col lg:flex-row"
-              >
-                {/* Image */}
-                <div className="relative lg:w-1/2 h-1/2 lg:h-full">
-                  <img
-                    src={story.image}
-                    alt={story.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="p-12 flex flex-col justify-center space-y-8 lg:w-1/2 h-1/2 lg:h-full">
-                  <div className="space-y-6">
-                    <h4 className="text-red-500 text-sm uppercase tracking-widest font-medium ep">
-                      {story.subtitle}
-                    </h4>
-                    <h2 className="text-4xl md:text-5xl lg:text-8xl font-bold leading-tight tracking-wide bebas">
-                      {story.title}
-                    </h2>
-                    <p className="text-lg text-gray-300 leading-relaxed max-w-lg p-regular">
-                      {story.description}
-                    </p>
+        {/* === Desktop / Large Screen Layout === */}
+        <div className="hidden lg:block relative h-[400vh]">
+          <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+            <motion.div style={{ x }} className="flex">
+              {stories.map((story) => (
+                <motion.div
+                  key={story.id}
+                  className="w-screen h-screen bg-[#1F1F1F] flex flex-col lg:flex-row"
+                >
+                  <div className="relative lg:w-1/2 h-1/2 lg:h-full">
+                    <img
+                      src={story.image}
+                      alt={story.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <a
-                    href={story.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block w-fit bg-red-600 hover:bg-red-700 text-white font-black py-4 px-8 text-sm tracking-wider uppercase transition-all duration-300 hover:scale-105 rounded-lg shadow-lg ep"
-                  >
-                    View Project
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Gradient Overlay on right */}
-          <div className="pointer-events-none hidden lg:block absolute right-0 top-0 h-full w-[200px] md:w-[500px] bg-gradient-to-r from-transparent to-black z-20" />
+                  <div className="p-12 flex flex-col justify-center space-y-8 lg:w-1/2 h-1/2 lg:h-full">
+                    <div className="space-y-6">
+                      <h4 className="text-red-500 text-sm uppercase tracking-widest font-medium ep">
+                        {story.subtitle}
+                      </h4>
+                      <h2 className="text-4xl md:text-5xl lg:text-8xl font-bold leading-tight tracking-wide bebas">
+                        {story.title}
+                      </h2>
+                      <p className="text-lg text-gray-300 leading-relaxed max-w-lg p-regular">
+                        {story.description}
+                      </p>
+                    </div>
+                    <a
+                      href={story.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block w-fit bg-red-600 hover:bg-red-700 text-white font-black py-4 px-8 text-sm tracking-wider uppercase transition-all duration-300 hover:scale-105 rounded-lg shadow-lg ep"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-[200px] md:w-[500px] bg-gradient-to-r from-transparent to-black z-20" />
+          </div>
         </div>
       </section>
     </div>

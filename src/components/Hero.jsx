@@ -15,7 +15,7 @@ const Hero = () => {
         {/* Background Image with Parallax Effect */}
         <div className="absolute inset-0 z-0">
           <div
-            className={`absolute inset-0 h-full w-full bg-cover bg-center transition-all duration-2000 md:scale-100 scale-150
+            className={`absolute inset-0 h-full w-full bg-cover bg-center transition-all duration-2000 md:scale-100 scale-[3] sm:-translate-y-0 -translate-y-4
             }`}
             style={{
               backgroundImage: `url(${bgImg})`,
