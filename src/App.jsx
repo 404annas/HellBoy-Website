@@ -15,11 +15,11 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
-      <Wall />
       {/* <WyrdSection /> */}
       <Ghost />
       <Projects />
-      <ComicComponent />
+      {/* <ComicComponent /> */}
+      <Wall />
       <HellboyFooter />
     </div>
   );
