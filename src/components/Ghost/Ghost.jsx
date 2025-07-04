@@ -85,14 +85,14 @@ const Ghost = () => {
           className="flex flex-col w-full max-w-lg gap-6"
         >
           <div className="bg-[#BAA891] text-black text-xl sm:text-2xl md:text-3xl font-bold ep border-2 border-black p-4 text-center">
-            <span className="text-4xl sm:text-5xl md:text-6xl">A</span>ncient
+            <span className="text-4xl sm:text-5xl md:text-6xl">C</span>rafting Iconic Stories.
             evil lives in the Wyrd
           </div>
           <div className="bg-[#BAA891] text-black text-xl sm:text-2xl md:text-3xl font-bold ep border-2 border-black p-4 text-center">
-            Eager to be
+            From Code Studio to Cinematic Masterpice
           </div>
           <div className="bg-[#BAA891] text-black text-xl sm:text-2xl md:text-3xl font-bold ep border-2 border-black p-4 text-center">
-            Let
+            The visionary behind the lens
           </div>
         </motion.div>
 
