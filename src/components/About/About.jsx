@@ -20,7 +20,7 @@ const About = () => {
         <div className="relative">
           <div className="satisfy font-black text-[48px] sm:text-[64px] md:text-[80px] lg:text-[110px] leading-none -rotate-[6deg] sm:-rotate-[8deg] lg:-rotate-[10deg]">
             <h1>Sharukh</h1>
-            <h1 className="sm:translate-x-20 md:translate-x-32 lg:translate-x-40">Kazim</h1>
+            <h1 className="">Kazim</h1>
           </div>
           <div className="absolute inset-0 bg-[#E1D5D5]/70 h-40 sm:h-56 md:h-64 lg:h-80 -translate-y-2 -rotate-[6deg] sm:-rotate-[8deg] lg:-rotate-[10deg]"></div>
         </div>
