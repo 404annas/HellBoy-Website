@@ -7,6 +7,7 @@ import WyrdSection from "./components/Wryd";
 import Projects from "./components/Projects";
 import ComicComponent from "./components/Comic";
 import HellboyFooter from "./components/Footer";
+import Wall from "./components/Wall";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <Wall />
       {/* <WyrdSection /> */}
       <Ghost />
       <Projects />

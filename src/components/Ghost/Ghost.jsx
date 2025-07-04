@@ -44,7 +44,7 @@ const Ghost = () => {
 
         {/* Speech Boxes */}
         <div
-          className="absolute top-10 left-40 max-w-[700px] bg-[#BAA891] text-black text-5xl z-10 font-bold ep border-2 border-black"
+          className="absolute top-10 left-40 max-w-[700px] bg-[#BAA891] text-black text-3xl z-10 font-bold ep border-2 border-black"
           style={{
             backgroundImage: `url('https://assets-global.website-files.com/634c7f996668dd27ef8f1114_speech%20box%20texture.webp')`,
             backgroundSize: "cover",
@@ -52,23 +52,23 @@ const Ghost = () => {
             padding: "30px 20px",
           }}
         >
-          <span className="font-bold ep text-9xl">A</span>ncient evil lives
+          <span className="font-bold ep text-8xl">C</span>rafting Iconic Stories.
           <br />
-          in the Wyrd
+          Producing Unforgettable Visuals
         </div>
 
         <div
-          className="absolute bottom-52 right-60 bg-[#BAA891] text-black text-5xl z-10 font-bold ep border-2 border-black"
+          className="absolute bottom-52 right-60 bg-[#BAA891] text-black text-3xl z-10 font-bold ep border-2 border-black"
           style={{ padding: "30px 20px" }}
         >
-          Eager to be
+          From Code Studio to Cinematic Masterpice
         </div>
 
         <div
-          className="absolute bottom-20 right-[650px] bg-[#BAA891] text-black text-5xl z-10 font-bold ep border-2 border-black"
+          className="absolute bottom-20 right-[650px] bg-[#BAA891] text-black text-3xl z-10 font-bold ep border-2 border-black"
           style={{ padding: "30px 20px" }}
         >
-          Let
+          The visionary behind the lens
         </div>
 
         {/* OUT! Big Text */}
