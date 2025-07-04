@@ -103,7 +103,7 @@ const Projects = () => {
                     <img
                       src={story.image}
                       alt={story.title}
-                      className="w-full h-full object-cover"
+                      className="w-[70%] h-full object-cover"
                     />
                   </div>
                   <div className="p-12 flex flex-col justify-center space-y-8 lg:w-1/2 h-1/2 lg:h-full">
