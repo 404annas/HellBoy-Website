@@ -29,12 +29,23 @@ const images = [
   img6,
 ];
 
+const spans = [
+  "col-span-1 md:col-span-2",
+  "col-span-1",
+  "col-span-2",
+  "col-span-1 md:col-span-2",
+  "col-span-2",
+  "col-span-1",
+  "col-span-2",
+  "col-span-1",
+];
+
 const Wall = () => {
   return (
     <div className="bg-black">
-      <div className="max-w-6xl mx-auto py-10 px-4">
+      <div className="relative max-w-6xl mx-auto py-10 px-4">
         {/* Row 1 - 3 images responsive */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6 w-full">
           {images.slice(0, 3).map((src, index) => (
             <ImageBox key={index} src={src} />
           ))}
@@ -77,6 +88,13 @@ const Wall = () => {
           {images.slice(5).map((src, index) => (
             <ImageBox key={index} src={src} />
           ))}
+        </div>
+
+        <div className="absolute bottom-0 right-5 max-w-xs rounded-xl border border-black bg-[#FE5242] text-black px-6 py-4 shadow-lg">
+          <p className="font-bold text-lg bebas">🎥 I am a Video Producer</p>
+          <p className="text-sm mt-2 p-regular">
+            Crafting visual stories that captivate audiences worldwide.
+          </p>
         </div>
       </div>
     </div>

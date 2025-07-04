@@ -59,7 +59,7 @@ const Ghost = () => {
               "url('https://assets-global.website-files.com/63461870233518fc9cce0691/634c7f996668dd27ef8f1114_speech%20box%20texture.webp')",
           }}
         >
-          <span className="text-4xl sm:text-5xl md:text-6xl ep">C</span>
+          <span className="text-4xl sm:text-5xl md:text-6xl libre-b">C</span>
           <span>rafting Iconic Stories.</span>
           <p>Producing Unforgettable Visuals</p>
         </motion.div>
@@ -163,7 +163,7 @@ const Ghost = () => {
                 "url('https://assets-global.website-files.com/63461870233518fc9cce0691/634c7f996668dd27ef8f1114_speech%20box%20texture.webp')",
             }}
           >
-            <span className="text-4xl sm:text-5xl md:text-6xl">C</span>rafting
+            <span className="text-4xl sm:text-5xl md:text-6xl libre-b">C</span>rafting
             Iconic Stories.
             <br /> Producing Unforgettable Visuals
           </motion.div>
