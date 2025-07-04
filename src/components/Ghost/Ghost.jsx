@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Sharukh from "../../asserts/Sharukh2.png";
-import { TvMinimalPlay } from 'lucide-react';
-import { useEffect } from 'react';
-
+import { TvMinimalPlay } from "lucide-react";
+import { useEffect } from "react";
 
 const Ghost = () => {
   const containerRef = useRef(null);
@@ -71,20 +70,20 @@ const Ghost = () => {
         >
           From Code Studio to Cinematic Masterpiece
         </motion.div>
-<motion.div
-  className="absolute z-20 top-[49%] left-[82%] transform -translate-x-1/2 -translate-y-1/2 text-red-700"
-  animate={{
-    x: ["0%", "10%", "-10%", "0%"],
-    y: ["0%", "-10%", "10%", "0%"],
-  }}
-  transition={{
-    duration: 2,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
->
-  <TvMinimalPlay className="w-10 h-10" />
-</motion.div>
+        <motion.div
+          className="absolute z-20 top-[49%] left-[82%] transform -translate-x-1/2 -translate-y-1/2 text-red-700"
+          animate={{
+            x: ["0%", "10%", "-10%", "0%"],
+            y: ["0%", "-10%", "10%", "0%"],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <TvMinimalPlay className="w-10 h-10" />
+        </motion.div>
         <motion.div
           style={{ y }}
           className="absolute bottom-20 right-[650px] bg-[#BAA891] text-black text-2xl z-10 font-bold libre-b border-2 border-black px-4 py-6 shadow-md"
@@ -123,7 +122,20 @@ const Ghost = () => {
           <motion.div className="bg-[#BAA891] text-black text-xl sm:text-2xl md:text-3xl font-bold ep border-2 border-black p-4 text-center">
             From Code Studio to Cinematic Masterpiece
           </motion.div>
-
+          <motion.div
+            className="absolute z-20 top-[40%] left-[90%] transform -translate-x-1/2 -translate-y-1/2 text-red-700"
+            animate={{
+              x: ["0%", "10%", "-10%", "0%"],
+              y: ["0%", "-10%", "10%", "0%"],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <TvMinimalPlay className="w-6 h-6" />
+          </motion.div>
           <motion.div className="bg-[#BAA891] text-black text-xl sm:text-2xl md:text-3xl font-bold ep border-2 border-black p-4 text-center">
             The visionary behind the lens
           </motion.div>
