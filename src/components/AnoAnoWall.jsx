@@ -19,7 +19,6 @@ import Velo from "../asserts/VeloVid.mp4";
 import Velo2 from "../asserts/Velo2Vid.mp4";
 import Sohna from "../asserts/SohnaVid.mp4";
 import Pepsi from "../asserts/PepsiVid.mp4";
-import Pcb from "../asserts/PcbVid.mp4";
 import Vuse from "../asserts/VuseVid.mp4";
 import Coke from "../asserts/CoKeVid.mp4";
 
