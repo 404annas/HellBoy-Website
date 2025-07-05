@@ -20,7 +20,7 @@ import Velo2 from "../asserts/Velo2Vid.mp4";
 import Sohna from "../asserts/SohnaVid.mp4";
 import Pepsi from "../asserts/PepsiVid.mp4";
 import Vuse from "../asserts/VuseVid.mp4";
-import Coke from "../asserts/CoKeVid.mp4";
+import Coke from "../asserts/CokeVid.mp4";
 
 const videos = [
   { src: Sohna, poster: img1 },
