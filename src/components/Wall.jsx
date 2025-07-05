@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 import img1 from "../asserts/gallery-1.png";
@@ -8,85 +9,71 @@ import img4 from "../asserts/gallery-4.png";
 import img5 from "../asserts/gallery-5.png";
 import img6 from "../asserts/gallery-6.png";
 
-const images = [
-  // "https://images.unsplash.com/photo-1628359355624-855775b5c9c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXJ0aXN0fGVufDB8fDB8fHww",
-  // "https://images.unsplash.com/photo-1545159270-03b3dc3b54b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tJTIwYXJ0aXN0c3xlbnwwfHwwfHx8MA%3D%3D",
-  // "https://images.unsplash.com/photo-1650783756107-739513b38177?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0aXN0fGVufDB8fDB8fHww",
-  // "https://images.unsplash.com/photo-1593382067395-ace3045a1547?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFydGlzdHxlbnwwfHwwfHx8MA%3D%3D",
-  // "https://images.unsplash.com/photo-1739488690004-d3166d2890ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHJhbmRvbSUyMGFydGlzdHN8ZW58MHx8MHx8fDA%3D",
-  // "https://images.unsplash.com/photo-1626736327061-7c27ad865761?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbSUyMGFydGlzdHN8ZW58MHx8MHx8fDA%3D",
-  // "https://plus.unsplash.com/premium_photo-1692007544003-b3e7f73365c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHJhbmRvbSUyMGFydGlzdHN8ZW58MHx8MHx8fDA%3D",
-  // "https://plus.unsplash.com/premium_photo-1707413391465-82ac03dd5555?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwYXJ0aXN0c3xlbnwwfHwwfHx8MA%3D%3D",
+import Blockbustor from "../asserts/BlockbusterVid.mp4";
+import Tujan from "../asserts/TujanVid.mp4";
+import Velo from "../asserts/VeloVid.mp4";
+import Velo2 from "../asserts/Velo2Vid.mp4";
+import Sohna from "../asserts/SohnaVid.mp4";
+import Pepsi from "../asserts/PepsiVid.mp4";
+import Pcb from "../asserts/PcbVid.mp4";
+import Vuse from "../asserts/VuseVid.mp4";
 
-  img1,
-  img5,
-  img3,
-  img2,
-  img6,
-  // img3,
-  img2,
-  img4,
-  img6,
-];
-
-const spans = [
-  "col-span-1 md:col-span-2",
-  "col-span-1",
-  "col-span-2",
-  "col-span-1 md:col-span-2",
-  "col-span-2",
-  "col-span-1",
-  "col-span-2",
-  "col-span-1",
+const videos = [
+  { src: Sohna, poster: img1 },
+  { src: Tujan, poster: img5 },
+  { src: Pepsi, poster: img3 },
+  { src: Velo, poster: img2 },
+  { src: Tujan, poster: img6 },
+  { src: Velo, poster: img2 },
+  { src: Blockbustor, poster: img4 },
+  { src: Tujan, poster: img6 },
 ];
 
 const Wall = () => {
   return (
     <div className="bg-black">
       <div className="relative max-w-6xl mx-auto py-10 px-4">
-        {/* Row 1 - 3 images responsive */}
+        {/* Row 1 - 3 videos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6 w-full">
-          {images.slice(0, 3).map((src, index) => (
-            <ImageBox key={index} src={src} />
+          {videos.slice(0, 3).map((video, index) => (
+            <VideoBox key={index} src={video.src} poster={video.poster} />
           ))}
         </div>
 
-        {/* Row 2 - 2 images, responsive, centered */}
+        {/* Row 2 - 2 videos, responsive, centered */}
         <div className="flex flex-wrap justify-center gap-4 mb-6 relative">
           <div
             className="
-      absolute
-      text-[#FE5242]
-      [text-shadow:_-2px_-2px_0_black,_2px_-2px_0_black,_-2px_2px_0_black,_2px_2px_0_black]
-      font-black
-      bebas
-      rotate-12
-      tracking-wide
-      z-10
-
-      right-4
-      -top-6
-      sm:right-12 sm:-top-8
-      md:right-28 md:-top-14
-
-      text-6xl
-      sm:text-7xl
-      md:text-9xl
-    "
+              absolute
+              text-[#FE5242]
+              [text-shadow:_-2px_-2px_0_black,_2px_-2px_0_black,_-2px_2px_0_black,_2px_2px_0_black]
+              font-black
+              bebas
+              rotate-12
+              tracking-wide
+              z-10
+              right-4
+              -top-6
+              sm:right-12 sm:-top-8
+              md:right-28 md:-top-14
+              text-6xl
+              sm:text-7xl
+              md:text-9xl
+            "
           >
             FEPO!
           </div>
-          {images.slice(3, 5).map((src, index) => (
+          {videos.slice(3, 5).map((video, index) => (
             <div key={index} className="w-full sm:w-1/2 md:w-1/3 max-w-xs">
-              <ImageBox src={src} />
+              <VideoBox src={video.src} poster={video.poster} />
             </div>
           ))}
         </div>
 
-        {/* Row 3 - 3 images responsive */}
+        {/* Row 3 - 3 videos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {images.slice(5).map((src, index) => (
-            <ImageBox key={index} src={src} />
+          {videos.slice(5).map((video, index) => (
+            <VideoBox key={index} src={video.src} poster={video.poster} />
           ))}
         </div>
 
@@ -101,48 +88,30 @@ const Wall = () => {
   );
 };
 
-const ImageBox = ({ src }) => {
-  const [hovered, setHovered] = useState(false);
+const VideoBox = ({ src, poster }) => {
+  const videoRef = useRef(null);
 
-  const rawX = useMotionValue(0);
-  const rawY = useMotionValue(0);
-
-  const x = useSpring(rawX, { stiffness: 100, damping: 15 });
-  const y = useSpring(rawY, { stiffness: 100, damping: 15 });
-
-  const handleMouseMove = (e) => {
-    const { left, top, width, height } =
-      e.currentTarget.getBoundingClientRect();
-    const offsetX = e.clientX - left - width / 2;
-    const offsetY = e.clientY - top - height / 2;
-
-    rawX.set(offsetX * 0.02);
-    rawY.set(offsetY * 0.02);
+  const handleMouseEnter = () => {
+    videoRef.current?.play();
   };
 
-  const handleMouseEnter = () => setHovered(true);
   const handleMouseLeave = () => {
-    setHovered(false);
-    rawX.set(0);
-    rawY.set(0);
+    videoRef.current?.pause();
   };
 
   return (
     <div
-      className="overflow-hidden border-4 border-transparent transition-all duration-500 rounded-md"
-      onMouseMove={handleMouseMove}
+      className="overflow-hidden border-4 border-transparent transition-all duration-500 rounded-md relative group cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <motion.img
+      <video
+        ref={videoRef}
         src={src}
-        alt=""
-        style={{ x, y }}
-        animate={{
-          filter: hovered ? "grayscale(0%)" : "grayscale(100%)",
-        }}
-        transition={{ duration: 0.5 }}
-        className="w-full h-auto cursor-pointer object-cover rounded-md"
+        poster={poster}
+        muted
+        preload="metadata"
+        className="w-full h-full object-cover rounded-md"
       />
     </div>
   );
