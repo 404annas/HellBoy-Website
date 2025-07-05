@@ -7,7 +7,7 @@ import WyrdSection from "./components/Wryd";
 import Projects from "./components/Projects";
 import ComicComponent from "./components/Comic";
 import HellboyFooter from "./components/Footer";
-import AnoWall from "./components/AnoWall";
+import AnoAnoWall from "./components/AnoAnoWall";
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
       <About />
       <Projects />
       {/* <ComicComponent /> */}
-      <AnoWall />
+      <AnoAnoWall />
       <HellboyFooter />
     </div>
   );
