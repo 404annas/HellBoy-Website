@@ -33,7 +33,7 @@ const videos = [
   { src: Tujan, poster: img6 },
 ];
 
-const AnoWall = () => {
+const AnoAnoWall = () => {
   return (
     <div className="bg-black">
       <div className="relative max-w-6xl mx-auto py-10 px-4">
@@ -49,7 +49,7 @@ const AnoWall = () => {
         >
           <p className="font-bold text-lg bebas">Hover The Wall</p>
         </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6 h-52 w-[100%]">
           {videos.slice(0, 3).map((video, index) => (
             <VideoBox key={index} src={video.src} poster={video.poster} />
           ))}
@@ -79,14 +79,17 @@ const AnoWall = () => {
             FEPO!
           </div>
           {videos.slice(3, 5).map((video, index) => (
-            <div key={index} className="w-full sm:w-1/2 md:w-1/3 max-w-xs">
+            <div
+              key={index}
+              className="w-full sm:w-1/2 md:w-1/3 max-w-xs h-full"
+            >
               <VideoBox src={video.src} poster={video.poster} />
             </div>
           ))}
         </div>
 
         {/* Row 3 - 3 videos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 h-52 gap-4">
           {videos.slice(5).map((video, index) => (
             <VideoBox key={index} src={video.src} poster={video.poster} />
           ))}
@@ -126,10 +129,15 @@ const VideoBox = ({ src, poster }) => {
         poster={poster}
         muted
         preload="metadata"
-        className="w-full h-full object-cover rounded-md"
+        className="w-full h-full object-cover rounded-md filter
+          grayscale
+          transition
+          duration-700
+          ease-in-out
+          group-hover:grayscale-0"
       />
     </div>
   );
 };
 
-export default AnoWall;
+export default AnoAnoWall;

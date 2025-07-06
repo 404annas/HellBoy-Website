@@ -58,6 +58,25 @@ const Projects = () => {
       <section ref={containerRef} className="w-full">
         {/* === Mobile / Tablet Layout === */}
         <div className="flex flex-col lg:hidden">
+          <h1
+            className="
+    text-white
+    text-7xl
+    lg:text-8xl
+    xl:text-9xl
+    leading-none
+    fjalla-r
+    uppercase
+    font-black
+    px-4
+    sm:px-8
+    md:px-12
+    pt-2
+    tracking-wide
+  "
+          >
+            WORK
+          </h1>
           {stories.map((story) => (
             <div key={story.id} className="flex flex-col w-full">
               <div className="w-full">
@@ -92,6 +111,24 @@ const Projects = () => {
 
         {/* === Desktop / Large Screen Layout === */}
         <div className="hidden lg:block relative h-[400vh]">
+          <h1
+            className="
+  text-white 
+  text-[80px] 
+  md:text-[120px] 
+  lg:text-[160px] 
+  xl:text-[200px] 
+  leading-none 
+  bebas 
+  uppercase 
+  font-black 
+  px-4 md:px-12 lg:px-20 
+  pt-2 
+  tracking-wide
+"
+          >
+            WORK
+          </h1>
           <div className="sticky top-0 h-screen flex items-center overflow-hidden">
             <motion.div style={{ x }} className="flex">
               {stories.map((story) => (

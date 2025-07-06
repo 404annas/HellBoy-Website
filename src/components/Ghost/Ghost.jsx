@@ -20,7 +20,7 @@ const Ghost = () => {
   });
 
   // Stronger parallax for "FEPO!"
-  const rawYBig = useTransform(scrollYProgress, [0, 1], ["200px", "-200px"]);
+  const rawYBig = useTransform(scrollYProgress, [0, 1], ["100px", "-100px"]);
   const yBig = useSpring(rawYBig, {
     stiffness: 80,
     damping: 20,
@@ -163,8 +163,8 @@ const Ghost = () => {
                 "url('https://assets-global.website-files.com/63461870233518fc9cce0691/634c7f996668dd27ef8f1114_speech%20box%20texture.webp')",
             }}
           >
-            <span className="text-4xl sm:text-5xl md:text-6xl libre-b">C</span>rafting
-            Iconic Stories.
+            <span className="text-4xl sm:text-5xl md:text-6xl libre-b">C</span>
+            rafting Iconic Stories.
             <br /> Producing Unforgettable Visuals
           </motion.div>
 
