@@ -23,12 +23,10 @@ const videos = [
   { src: Sohna, poster: img1, w: "25%", h: "h-52" },
   { src: Velo2, poster: img7, w: "40%", h: "h-52" },
   { src: Pepsi, poster: img3, w: "30%", h: "h-52" },
-
-  { src: Velo, poster: img2, w: "40%", h: "h-72" },
-  { src: Blockbuster, poster: img4, w: "55%", h: "h-72" },
-
+  { src: Velo, poster: img2, w: "40%", h: "h-80" },
+  { src: Blockbuster, poster: img4, w: "55%", h: "h-80" },
   { src: Coke, poster: img8, w: "30%", h: "h-56" },
-  { src: Vuse, poster: img5, w: "30%", h: "h-56" },
+  { src: Vuse, poster: img5, w: "35%", h: "h-56" },
   { src: Tujan, poster: img6, w: "30%", h: "h-56" },
 ];
 
@@ -41,24 +39,43 @@ const AnoAnoWall = () => {
         <motion.div
           className="absolute top-2 left-5 px-6 py-2 bg-[#FE5242] border-yellow-400 shadow-lg cursor-pointer"
           animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
           <p className="font-bold text-lg bebas text-black">Hover The Wall</p>
         </motion.div>
 
-        {rows.map((row, ri) => (
-          <div key={ri} className="flex gap-4 flex-wrap">
-            {row.map((item, idx) => (
-              <div
-                key={idx}
-                className={`border-4 border-yellow-400 rounded-md overflow-hidden w-full mx-auto ${item.h} flex items-center justify-center`}
-                style={{ width: item.w }}
-              >
-                <VideoBox src={item.src} poster={item.poster} />
-              </div>
-            ))}
-          </div>
-        ))}
+        {/* 📱 Mobile Layout */}
+        <div className="flex flex-col gap-4 md:hidden">
+          {videos.map((item, idx) => (
+            <div
+              key={idx}
+              className="w-full h-52 border-4 border-yellow-400 rounded-md overflow-hidden flex items-center justify-center"
+            >
+              <VideoBox src={item.src} poster={item.poster} />
+            </div>
+          ))}
+        </div>
+
+        {/* 💻 Tablet/Desktop Layout */}
+        <div className="hidden md:block space-y-4">
+          {rows.map((row, ri) => (
+            <div key={ri} className="flex flex-row gap-2">
+              {row.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`border-4 border-yellow-400 rounded-md overflow-hidden w-full mx-auto flex items-center justify-center ${item.h}`}
+                  style={{ width: item.w }}
+                >
+                  <VideoBox src={item.src} poster={item.poster} />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
 
         <div className="absolute bottom-0 right-5 max-w-xs px-6 py-4 bg-[#FE5242] border-yellow-400 rounded-xl shadow-lg">
           <p className="font-bold text-lg bebas text-black">
@@ -75,7 +92,6 @@ const AnoAnoWall = () => {
 
 const VideoBox = ({ src, poster }) => {
   const videoRef = useRef(null);
-
   const play = () => videoRef.current?.play();
   const pause = () => videoRef.current?.pause();
 
