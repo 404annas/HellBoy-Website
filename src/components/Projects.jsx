@@ -9,10 +9,10 @@ const Projects = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"],
+    offset: ["start start", "end end"],
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["40%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
 
   const stories = [
     {
@@ -55,7 +55,7 @@ const Projects = () => {
 
   return (
     <div className="bg-[#1F1F1F] text-white w-full">
-      <section ref={containerRef} className="w-full">
+      <section className="w-full">
         {/* === Mobile / Tablet Layout === */}
         <div className="flex flex-col lg:hidden">
           <h1
@@ -111,9 +111,8 @@ const Projects = () => {
         </div>
 
         {/* === Desktop / Large Screen Layout === */}
-        <div className="hidden lg:block relative h-[400vh]">
-          <h1
-            className="
+        <h1
+          className="
   text-white 
   text-[80px] 
   md:text-[120px] 
@@ -127,10 +126,11 @@ const Projects = () => {
   pt-2 
   tracking-wide
 "
-          >
-            WORK
-          </h1>
-          <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+        >
+          WORK
+        </h1>
+        <div ref={containerRef} className="hidden lg:block relative h-[400vh]">
+          <div className="sticky left-0 top-0 h-screen flex items-center overflow-hidden">
             <motion.div style={{ x }} className="flex">
               {stories.map((story) => (
                 <motion.div

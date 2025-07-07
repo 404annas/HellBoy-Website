@@ -23,12 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-      <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 bg-black backdrop-blur-sm border-b border-red-500/20"
-        initial={{ y: -100 }}
-        animate={{ y: isNavVisible ? 0 : -100 }}
-        transition={{ duration: 0.3 }}
-      >
+      <motion.nav className="sticky top-0 left-0 right-0 z-50 bg-black backdrop-blur-sm border-b border-red-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">

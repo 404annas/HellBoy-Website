@@ -9,7 +9,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-zinc-950 mt-10 text-white overflow-hidden">
+    <main className="min-h-screen bg-zinc-950 text-white overflow-hidden">
       {/* Hero Section */}
       <section className="relative h-[100vh] overflow-hidden">
         {/* Background Image with Parallax Effect */}
