@@ -34,7 +34,7 @@ const AnoAnoWall = () => {
   const rows = [videos.slice(0, 3), videos.slice(3, 5), videos.slice(5, 8)];
 
   return (
-    <div className="bg-black">
+    <div className="bg-black pt-4">
       <div className="relative max-w-7xl mx-auto py-10 px-4 space-y-6">
         <motion.div
           className="absolute top-2 left-5 px-6 py-2 bg-[#FE5242] border-yellow-400 shadow-lg cursor-pointer"

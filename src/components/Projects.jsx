@@ -71,7 +71,8 @@ const Projects = () => {
     px-4
     sm:px-8
     md:px-12
-    pt-2
+    pt-10
+    pb-4
     tracking-wide
   "
           >
@@ -86,7 +87,7 @@ const Projects = () => {
                   className="w-full h-[70vh] object-cover"
                 />
               </div>
-              <div className="p-4 sm:p-6 md:p-8 space-y-3 sm:space-y-4">
+              <div className="px-4 py-10 sm:p-6 md:p-8 space-y-3 sm:space-y-4">
                 <h4 className="text-red-500 text-xs sm:text-sm uppercase tracking-widest font-medium ep">
                   {story.subtitle}
                 </h4>
@@ -100,7 +101,7 @@ const Projects = () => {
                   href={story.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 hover:scale-105 rounded shadow ep"
+                  className="inline-block bg-[#CB3A34] hover:bg-red-700 text-white font-bold py-2 px-4 text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 shadow ep"
                 >
                   View Project
                 </a>
@@ -159,7 +160,7 @@ const Projects = () => {
                       href={story.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block w-fit bg-red-600 hover:bg-red-700 text-white font-black py-4 px-8 text-sm tracking-wider uppercase transition-all duration-300 hover:scale-105 rounded-lg shadow-lg ep"
+                      className="inline-block w-fit bg-[#CB3A34] hover:bg-red-700 text-white font-black py-4 px-8 text-sm tracking-wider uppercase transition-all duration-300 shadow-lg ep"
                     >
                       View Project
                     </a>

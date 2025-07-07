@@ -44,7 +44,7 @@ const About = () => {
         </div>
 
         <div className="md:hidden block">
-          <p className="uppercase font-extrabold bebas text-[40px] sm:text-[64px] md:text-[80px] lg:text-[110px] leading-none tracking-wide text-[white]">
+          <p className="mt-10 uppercase font-extrabold bebas text-[40px] sm:text-[64px] md:text-[80px] lg:text-[110px] leading-none tracking-wide text-[white]">
             Gilgit To Global
           </p>
         </div>
