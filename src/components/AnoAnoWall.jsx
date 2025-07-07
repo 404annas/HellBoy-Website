@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import { Instagram } from "lucide-react";
 
 import img1 from "../asserts/gallery-1.png";
 import img2 from "../asserts/gallery-2.png";
@@ -77,13 +78,22 @@ const AnoAnoWall = () => {
           ))}
         </div>
 
-        <div className="absolute bottom-0 right-5 max-w-xs px-6 py-4 bg-[#FE5242] border-yellow-400 rounded-xl shadow-lg">
+        <div className="absolute bottom-0 right-5 max-w-xs px-6 py-4 bg-[#FE5242] rounded-xl shadow-lg">
           <p className="font-bold text-lg bebas text-black">
             🎥 I am a Video Producer
           </p>
           <p className="mt-2 text-sm p-regular text-black">
             Crafting visual stories that captivate audiences worldwide.
           </p>
+          <a
+            href="https://www.instagram.com/shahrukhkazimmusic?igsh=cjJlcTNid2RlMDg%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-flex items-center gap-2 bg-black text-white text-sm font-bold py-2 px-4 rounded hover:bg-gray-800 transition-all duration-300"
+          >
+            <Instagram className="w-5 h-5" />
+            <p className="ep">Connect me on Instagram</p>
+          </a>
         </div>
       </div>
     </div>
