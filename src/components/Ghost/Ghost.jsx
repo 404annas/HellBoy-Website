@@ -143,7 +143,7 @@ const Ghost = () => {
         {/* OUT! Big Text */}
         <motion.div
           style={{ y: yBig }}
-          className="absolute top-[55%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-[8rem] font-extrabold pointer-events-none select-none bebas tracking-wide z-10 text-[#FE5242] [text-shadow:_-2px_-2px_0_black,_2px_-2px_0_black,_-2px_2px_0_black,_2px_2px_0_black]"
+          className="absolute top-[60%] left-[52%] -translate-x-1/2 -translate-y-1/2 text-[8rem] font-extrabold pointer-events-none select-none bebas tracking-wide z-10 text-[#FE5242] [text-shadow:_-2px_-2px_0_black,_2px_-2px_0_black,_-2px_2px_0_black,_2px_2px_0_black]"
         >
           FEPO!
         </motion.div>

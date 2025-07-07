@@ -31,7 +31,7 @@ const About = () => {
 
       {/* Right Column */}
       <div className="w-full lg:w-1/2 -translate-x-0 lg:-translate-x-24 p-6 md:p-12 lg:p-16 flex flex-col">
-        <div className="">
+        <div className="md:block hidden">
           <p className="uppercase font-extrabold bebas text-[48px] sm:text-[64px] md:text-[80px] lg:text-[110px] leading-none tracking-wide text-[white]">
             Gilgit
           </p>
@@ -43,7 +43,13 @@ const About = () => {
           </p>
         </div>
 
-        <p className="my-6 md:my-8 text-sm sm:text-base md:text-lg p-regular text-[white]">
+        <div className="md:hidden block">
+          <p className="uppercase font-extrabold bebas text-[40px] sm:text-[64px] md:text-[80px] lg:text-[110px] leading-none tracking-wide text-[white]">
+            Gilgit To Global
+          </p>
+        </div>
+
+        <p className="my-4 md:my-8 text-sm sm:text-base md:text-lg p-regular text-[white]">
           Widely known as FEPO, is a celebrated Pakistani video producer and
           creative force behind some of the most iconic visual narratives of
           recent times.
@@ -55,14 +61,14 @@ const About = () => {
           </button>
         </div> */}
 
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10 items-center invert text-white">
+        <div className="flex justify-center gap-6 sm:gap-8 md:gap-10 items-center invert text-white">
           <a
             href="https://www.flaunt.com/post/shahrukh-kazim-ali"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              className="cursor-pointer w-28 sm:w-32 md:w-36"
+              className="cursor-pointer w-24 sm:w-32 md:w-36"
               src={brandLogo3}
               alt="Flaunt Logo"
             />
@@ -73,7 +79,7 @@ const About = () => {
             rel="noopener noreferrer"
           >
             <img
-              className="cursor-pointer w-28 sm:w-32 md:w-36"
+              className="cursor-pointer w-24 sm:w-32 md:w-36"
               src={brandLogo1}
               alt="Nation Logo"
             />
@@ -84,7 +90,7 @@ const About = () => {
             rel="noopener noreferrer"
           >
             <img
-              className="cursor-pointer w-28 sm:w-32 md:w-36"
+              className="cursor-pointer w-24 sm:w-32 md:w-36"
               src={brandLogo2}
               alt="Khaleej Time Logo"
             />

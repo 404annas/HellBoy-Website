@@ -12,7 +12,7 @@ const Projects = () => {
     offset: ["start end", "end start"],
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["20%", "-100%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["40%", "-95%"]);
 
   const stories = [
     {
@@ -83,7 +83,7 @@ const Projects = () => {
                 <img
                   src={story.image}
                   alt={story.title}
-                  className="w-full aspect-video object-cover"
+                  className="w-full h-[70vh] object-cover"
                 />
               </div>
               <div className="p-4 sm:p-6 md:p-8 space-y-3 sm:space-y-4">

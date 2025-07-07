@@ -207,7 +207,7 @@ const HellboyFooter = () => {
             }`}
           >
             {/* Left Links */}
-            <div className="flex flex-wrap items-center space-x-6 mb-4 lg:mb-0">
+            <div className="flex flex-wrap items-center justify-center space-x-6 mb-4 lg:mb-0">
               <p
                 // href="#"
                 className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-105 group relative"
@@ -278,7 +278,7 @@ const HellboyFooter = () => {
 
           {/* Copyright */}
           <div
-            className={`text-right mt-4 text-xs text-gray-500 transition-all duration-1000 delay-1500 hover:text-gray-400 ${
+            className={`text-center mt-4 text-xs text-gray-500 transition-all duration-1000 delay-1500 hover:text-gray-400 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-2 opacity-0"
