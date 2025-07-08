@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import img1 from "../asserts/story-1.jpg";
-import img2 from "../asserts/story-2.png";
-import img3 from "../asserts/story-3.jpg";
-import img4 from "../asserts/story-4.jpg";
+import img1 from "../asserts/work1.svg";
+import img2 from "../asserts/work2.svg";
+import img3 from "../asserts/work3.svg";
+import img4 from "../asserts/work4.svg";
 
 const Projects = () => {
   const containerRef = useRef(null);
@@ -30,7 +30,7 @@ const Projects = () => {
       subtitle: "Fusion of Rap & Rock",
       description:
         "Introspective themes brought to life through dynamic visual direction and cinematic storytelling.",
-      image: img2,
+      image: img3,
       link: "https://www.youtube.com/watch?v=8QK6QKwQ",
     },
     {
@@ -39,7 +39,7 @@ const Projects = () => {
       subtitle: "Pepsi Campaign",
       description:
         "Vibrant and culturally resonant visuals that elevated the brand's impact with youth audiences.",
-      image: img3,
+      image: img2,
       link: "https://www.youtube.com/watch?v=8QK6QKwQ",
     },
     {
@@ -125,6 +125,7 @@ const Projects = () => {
   px-4 md:px-12 lg:px-20 
   pt-2 
   tracking-wide
+  hidden lg:block
 "
         >
           WORK
